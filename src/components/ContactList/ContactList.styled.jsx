@@ -8,7 +8,7 @@ export const Item = styled.li`
 display: flex;
 align-items: center;
 // justify-content: space-between;
-width: 400px;
+width: 500px;
 margin-left: 10px;
 
 list-style: circle;
@@ -30,16 +30,17 @@ padding: 2px 5px;
 color: black;
 background-color: #ffffffff;
 font-weight: 500;
-font-size: 8px;
+font-size: 10px;
 line-height: 1.88;
 letter-spacing: 0.06em;
 border: none;
 border-radius: 4px;
 border: 1px solid rgba(238, 238, 238, 1);
 box-shadow: 0px 4px 4px $button-shadow;
-width: 50px;
-height: 20px;
+width: 80px;
+height: 25px;
 margin-left: auto;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 
