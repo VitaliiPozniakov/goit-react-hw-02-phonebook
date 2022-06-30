@@ -26,6 +26,11 @@ class App extends Component {
       name,
       number,
     };
+   
+    if ( name.trim() === null || name.trim() === ``|| number.trim() === null || number.trim() === ``) {
+      Notify.warning(`all fields must be completed`)
+      return
+    }
 
     this.state.contacts.some(contact => contact.name === name)
       ? Notify.warning(`${name} is already in contact`)
