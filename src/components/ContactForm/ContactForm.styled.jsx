@@ -10,7 +10,7 @@ border: 1px solid rgba(238, 238, 238, 1);
 export const Input = styled.input`
 padding-top: 14px;
 padding-bottom: 14px;
-padding-left: 42px;
+padding-left: 20px;
 font-weight: 400;
 font-size: 16px;
 line-height: 1.88;
