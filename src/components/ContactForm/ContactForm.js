@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Form, Input, Label, LabelText, Btn } from "./ContactForm.styled";
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 
 class ContactForm extends Component {
     state = {
@@ -19,8 +19,7 @@ handleChange = evt => {
 handleSubmit = evt => {
     evt.preventDefault();
       // console.log(this.props)
-    const { onSubmitProp } = this.props;
-    onSubmitProp(this.state);
+      this.props.onSubmitProp(this.state);
     this.reset();
   };
 
