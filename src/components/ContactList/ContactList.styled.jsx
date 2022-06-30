@@ -8,10 +8,15 @@ export const Item = styled.li`
 display: flex;
 align-items: center;
 // justify-content: space-between;
-width: 500px;
+
 margin-left: 10px;
 
-list-style: circle;
+
+max-width: 500px;
+
+@media screen and (min-width: 500px) {
+    max-width: 700px;
+  }
 
 `;
 

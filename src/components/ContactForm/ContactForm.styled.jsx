@@ -4,7 +4,12 @@ export const Form = styled.form`
 display: flex;
 flex-direction: column;
 border: 1px solid rgba(238, 238, 238, 1);
-width: 500px;
+max-width: 500px;
+
+@media screen and (min-width: 500px) {
+    max-width: 700px;
+  }
+
 `;
 
 export const Input = styled.input`
@@ -15,11 +20,13 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.88;
 letter-spacing: 0.06em;
-width: 400px;
+max-width: 500px;
 min-height: 20px;
 border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);, outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
 
 &:hover {
   cursor: pointer;
