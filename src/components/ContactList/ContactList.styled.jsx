@@ -12,10 +12,10 @@ align-items: center;
 margin-left: 10px;
 
 
-max-width: 500px;
+width: 100wh;
 
-@media screen and (min-width: 500px) {
-    max-width: 700px;
+@media screen and (min-width: 768px) {
+    width: 500px;
   }
 
 `;

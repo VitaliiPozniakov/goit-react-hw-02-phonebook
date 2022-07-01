@@ -6,6 +6,7 @@ import Filter from './Filter';
 import Section from './Section';
 import { Container } from './App.styled';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import Notification from './Notification';
 
 class App extends Component {
   state = {
@@ -26,10 +27,15 @@ class App extends Component {
       name,
       number,
     };
-   
-    if ( name.trim() === null || name.trim() === ``|| number.trim() === null || number.trim() === ``) {
-      Notify.warning(`all fields must be completed`)
-      return
+
+    if (
+      name.trim() === null ||
+      name.trim() === `` ||
+      number.trim() === null ||
+      number.trim() === ``
+    ) {
+      Notify.warning(`all fields must be completed`);
+      return;
     }
 
     this.state.contacts.some(contact => contact.name === name)
@@ -59,18 +65,25 @@ class App extends Component {
 
   render() {
     const visibleContacts = this.getVisibleContacts();
-    //  const removeContact = this.deleteContact
+    const { contacts, filter } = this.state;
     return (
       <Container>
         <Section title="Phonebook">
           <ContactForm onSubmitProp={this.addContact} />
         </Section>
+
         <Section title="Contacts">
-          <Filter value={this.state.filter} onChange={this.changeFilter} />
-          <ContactList
-            contacts={visibleContacts}
-            onDeleteContact={this.deleteContact}
-          />
+          {contacts.length > 1 && (
+            <Filter value={filter} onChange={this.changeFilter} />
+          )}
+          {contacts.length > 0 ? (
+            <ContactList
+              contacts={visibleContacts}
+              onDeleteContact={this.deleteContact}
+            />
+          ) : (
+            <Notification message="Your contactlist is empty" />
+          )}
         </Section>
       </Container>
     );
