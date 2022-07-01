@@ -5,9 +5,12 @@ padding-top: 20px;
 `;
 
 export const TitleWraper = styled.div`
-width: 500px;
-`;
+width: 100wh;
 
+@media screen and (min-width: 768px) {
+    width: 500px;
+  }
+`;
 
 export const Label = styled.h2`
 display: block;

@@ -1,34 +1,30 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
-export const List = styled.ul`
-`;
-
+export const List = styled.ul``;
 
 export const Item = styled.li`
-display: flex;
-align-items: center;
-// justify-content: space-between;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  width: 100wh;
 
-margin-left: 10px;
-
-
-width: 100wh;
-
-@media screen and (min-width: 768px) {
-    width: 500px;
+  &:not(:last-child) {
+    margin-bottom: 5px;
   }
 
+  @media screen and (min-width: 768px) {
+    width: 500px;
+  }
 `;
 
 export const Span = styled.span`
-display: block;
-width: 10px;
-height: 10px;
-margin-right: 5px;
-border-radius: 50%;
-background: black;
-margin-left: 5px;
-
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: black;
+  margin-left: 5px;
 `;
 export const Btn = styled.button`
 padding: 2px 5px;
@@ -47,8 +43,6 @@ height: 25px;
 margin-left: auto;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-
-
 &:hover,
 &:focus {
   background-color: #1e90ff;
@@ -59,4 +53,3 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);, background-color 250ms cu
   color: red;
 }
 `;
-
