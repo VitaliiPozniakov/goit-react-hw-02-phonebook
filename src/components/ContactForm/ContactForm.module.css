@@ -53,12 +53,12 @@
 }
 
 .btnWraper {
-    width: 100wh;
-  
-    @media screen and (min-width: 768px) {
-      width: 500px;
-    }
+  width: 100wh;
+
+  @media screen and (min-width: 768px) {
+    width: 500px;
   }
+}
 
 .btn {
   padding: 5px 32px;
@@ -79,7 +79,7 @@
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} 
+}
 
 .btn:hover,
 .btn:focus {
@@ -92,6 +92,5 @@
 }
 
 .error {
-    color: red;
-  }
-
+  color: red;
+}
